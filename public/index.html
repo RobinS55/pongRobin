@@ -6,15 +6,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>PongRobin</h1>
-  <canvas id="gameCanvas" width="500" height="500"></canvas>
+  <div class="container">
+    <h1>PongRobin</h1>
 
-  <!-- Knoppen voor mobiel -->
-  <div id="mobileControls">
-    <button id="upBtn">↑</button>
-    <button id="downBtn">↓</button>
+    <!-- Score -->
+    <div id="scoreContainer">
+      <span id="score1">0</span> - <span id="score2">0</span>
+    </div>
+
+    <!-- Canvas voor het spel -->
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+    <!-- Mobiele bediening + Ready -->
+    <div id="mobileControls">
+      <button id="upBtn">↑</button>
+      <button id="downBtn">↓</button>
+      <button id="readyBtn">Ready</button>
+    </div>
   </div>
 
+  <!-- Socket.io + client script -->
   <script src="/socket.io/socket.io.js"></script>
   <script src="client.js"></script>
 </body>
