@@ -1,20 +1,67 @@
 body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
   text-align: center;
-  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#scoreContainer {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
 }
 
 canvas {
-  border: 2px solid black;
+  border: 4px solid #333;
+  border-radius: 12px;
+  background: #fafafa;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
 }
 
 #mobileControls {
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 #mobileControls button {
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 5px;
+  font-size: 22px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#mobileControls button:hover {
+  background: #45a049;
+}
+
+@media (max-width: 600px) {
+  canvas {
+    width: 90vw;
+    height: 90vw;
+  }
+  #mobileControls button {
+    font-size: 20px;
+    padding: 10px 16px;
+  }
 }
